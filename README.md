@@ -3,9 +3,10 @@
 - Aqui encontra-se alguns dos cursos realizados sobre o Dart.
 
 
-## Ferramenta
+## Ferramenta e SDK
 
 - vscode
+- Dart SDK (pesquisar no google por: dart for windows)
 
 
 ## Plugins utilizados
