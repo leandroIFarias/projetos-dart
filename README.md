@@ -14,6 +14,13 @@
 - Dart
 - Code Runner
 - Indentation Level Movement
+- vscode-icons
+- markdownlint
+- Markdown Shortcuts
+- Image preview
+- Bracket Pair Comments
+- Better Comments
+
 
 ## Dicas
 
