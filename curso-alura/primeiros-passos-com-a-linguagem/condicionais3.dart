@@ -3,14 +3,12 @@ void main() {
   bool acompanhado = true;
 
   // && significa "e"
+  // || significa "ou"
 
-  if (idade >= 16) {
+  if (idade >= 16 || idade >= 10 && acompanhado) {
     print("Você pode entrar!");
-  } else {
-    if (idade >= 10 && acompanhado) {
-      print("Você pode entrar");
-    } else {
+  } 
+  else {
       print("Você não pode entrar");
-    }
   }
 }
