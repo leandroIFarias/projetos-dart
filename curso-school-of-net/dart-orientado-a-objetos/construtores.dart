@@ -21,4 +21,7 @@ class Retangulo {
 void main() {
   Retangulo retangulo = new Retangulo(3, 4);
   print(retangulo.area());
+
+  Retangulo quadrado = Retangulo.quadrado(3);
+  print(quadrado.area());
 }
