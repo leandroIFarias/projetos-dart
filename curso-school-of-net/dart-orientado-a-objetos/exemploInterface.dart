@@ -1,19 +1,28 @@
 abstract class FormaGeometrica{
   num area();
+
+  String tipo(){
+    return 'não informada';
+  }
 }
 
-class Retangulo extends FormaGeometrica{
+class Retangulo implements FormaGeometrica{
   num largura, altura;
 
   Retangulo(this.altura, this.largura);
 
-  //Com Classe Abstrata, a declaracao do metodo é opcional.
+  //Com Interface, a declaracao do metodo é obrigatorio. 
   num area(){
     return this.altura * this.largura;
   }
+
+  //Com Interface, a declaracao do metodo é obrigatorio. 
+  String tipo(){
+    return 'Retangulo';
+  }
 }
 
-class Quadrado extends FormaGeometrica{
+class Quadrado implements FormaGeometrica{
   num largura, altura;
 
   Quadrado(num dimensao){
@@ -21,15 +30,20 @@ class Quadrado extends FormaGeometrica{
     this.largura = dimensao;
   }
 
-  //Com Classe Abstrata, a declaracao do metodo é opcional. 
+  //Com Interface, a declaracao do metodo é obrigatorio. 
   num area(){
     return this.altura * this.largura;
+  }
+  
+  //Com Interface, a declaracao do metodo é obrigatorio. 
+  String tipo(){
+    return 'Retangulo';
   }
 }
 
 class CriaPdf{
   static String render(FormaGeometrica forma){
-    return 'A area da forma geometrica é ' + forma.area().toString();
+    return 'A area de ' + forma.tipo() + ' é ' + forma.area().toString();
   }
 
 }
