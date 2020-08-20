@@ -22,7 +22,7 @@ class ContaCorrente {
   }
 
   bool transferencia(double valorDeTransferencia, ContaCorrente contaDestino){
-    if (verificaSaldo(valorDeTransferencia)) {
+    if (!verificaSaldo(valorDeTransferencia)) {
       return false;
     } else {
       this.saldo -= valorDeTransferencia;
@@ -32,7 +32,7 @@ class ContaCorrente {
   }
 
   bool saque(double valorDoSaque){
-    if (verificaSaldo(valorDoSaque)) {
+    if (!verificaSaldo(valorDoSaque)) {
       return false;
     } else {
       this.saldo -= valorDoSaque;
