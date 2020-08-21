@@ -6,10 +6,12 @@ class ContaCorrente {
   int conta;
   double _saldo = 20.0;
   double chequeEspecial = -100.00;
+  static int totalDeContasCorrentes = 0;
 
 
   ContaCorrente(int novaAgencia, this.conta){
     if (novaAgencia > 0 ) _agencia = novaAgencia;
+    totalDeContasCorrentes++;
   }
 
   //forma mais simpplificada de get e set

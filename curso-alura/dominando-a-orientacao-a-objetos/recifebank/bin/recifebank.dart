@@ -2,9 +2,9 @@ import '../lib/contaCorrente.dart';
 import '../lib/cliente.dart';
 
 void main() {
-  ContaCorrente conta;
+  ContaCorrente contaJulia = ContaCorrente(3257, 15478625);
   
-  print(conta);
+  print(contaJulia.conta);
 }
 
 
