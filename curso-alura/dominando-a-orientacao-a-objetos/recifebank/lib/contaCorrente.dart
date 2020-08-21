@@ -7,9 +7,14 @@ class ContaCorrente {
   double _saldo = 20.0;
   double chequeEspecial = -100.00;
 
+
+  ContaCorrente(int novaAgencia, this.conta){
+    if (novaAgencia > 0 ) _agencia = novaAgencia;
+  }
+
   //forma mais simpplificada de get e set
   get agencia => _agencia;
-  set agencia(int novaAgencia) { _agencia = novaAgencia; }
+  set agencia(int novaAgencia) { if(novaAgencia > 0) _agencia = novaAgencia; }
 
   get saldo{
     return _saldo;
