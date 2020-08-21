@@ -1,0 +1,4 @@
+name: dart_mysql
+dependencies:
+  mysql1: ^0.17.1
+  args: ^1.5.1 
