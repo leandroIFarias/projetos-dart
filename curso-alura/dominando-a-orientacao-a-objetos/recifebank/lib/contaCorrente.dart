@@ -2,7 +2,7 @@ import 'cliente.dart';
 
 class ContaCorrente {
   Cliente titular;
-  int _agencia = 145;
+  int _agencia = 145; // com o "_" o atributo fica privado
   int conta;
   double _saldo = 20.0;
   double chequeEspecial = -100.00;
