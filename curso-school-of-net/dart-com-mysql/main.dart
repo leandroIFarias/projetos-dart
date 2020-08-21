@@ -3,7 +3,7 @@ main(List<String> arguments) {
   var parser = new ArgParser();
 
   parser.addOption(
-    'mode', defaultsTo: 'select',
+    'mode', defaultsTo: 'select-all',
     allowed: ['select-all', 'select', 'insert', 'update', 'delete', 'create-table']
   );
 
@@ -13,5 +13,30 @@ main(List<String> arguments) {
 
   var args = parser.parse(arguments);
 
-  print(args['mode']);
+  print('Executando no mode ' + args['mode']);
+
+  if (args['mode'] == 'select' || (args['mode'] == 'select-all' && args['id'] != null)) {
+    print('...');
+  }
+
+  if (args['mode'] == 'select-all') {
+    print('...');
+  }
+
+  if (args['mode'] == 'insert' ) {
+    print('...');
+  }
+
+  if (args['mode'] == 'update') {
+    print('...');
+  }
+
+  if (args['mode'] == 'delete') {
+    print('...');
+  }
+
+  if (args['mode'] == 'create-table') {
+    print('...');
+  }
+
 }
