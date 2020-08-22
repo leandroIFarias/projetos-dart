@@ -8,3 +8,7 @@ Created from templates made available by Stagehand under a BSD-style
 - stagehand --help
 - stagehand web-simple (tipo de projeto escolhido)
 - pub get (baixa todas as outras dependencias necessarias)
+
+- pub global activate webdev (serve para poder executar em ambiente de dev e gerar build)
+
+
