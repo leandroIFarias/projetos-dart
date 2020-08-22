@@ -13,14 +13,16 @@
 
 - Dart
 - Code Runner
-- Indentation Level Movement
 - vscode-icons
-- markdownlint
-- Markdown Shortcuts
 - Image preview
 - Bracket Pair Colorizer 2
 - Better Comments
 
+## Configurações da IDE para o Dart (não obrigatorio mas que facilita o desenvolvimento)
+- Em settings:
+-- dart linelength: 240
+-- dart previewflutter: marcar as 2 caixas: (preview Flutter Ui Guides e Preview Flutter Ui Guides Custom Tracking)
+-- dart closinglabels: (deixar marcado)
 
 ## Dicas
 
