@@ -9,8 +9,11 @@ Created from templates made available by Stagehand under a BSD-style
 - stagehand web-simple (tipo de projeto escolhido)
 - pub get (baixa todas as outras dependencias necessarias)
 
+** Outros Comandos
 - pub global activate webdev (serve para poder executar em ambiente de dev e gerar build)
 - webdev serve (comando para executar a aplicao)
+- Ctrl + c (para a execucao)
+- webdev build (comando para gerar um build)
 
 *** Links Uteis
 
