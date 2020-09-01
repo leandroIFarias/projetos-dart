@@ -1,37 +1,39 @@
 void semRetorno(){
   print('06.0)  Funcoes sem retorno \n');
 
-  void conceito(){
-    print('Funcao void sem retorno');
+  String conceito(){
+    return 'Funcao void sem retorno';
   }
 
-  void somarValores(int valorA, int valorB){
+  String somarValores(int valorA, int valorB){
     var resultado = valorA + valorB;
-    print('Soma: $valorA + $valorB = $resultado');
+    return 'Soma: $valorA + $valorB = $resultado';
   }
 
-  void verificarMaiorIdade(String nome, int idade){
+  String verificarMaiorIdade(String nome, int idade){
     var resposta;
     if (idade >= 18) {
       resposta = 'é maior';
     } else {
       resposta = 'não é maior';
     }
-    print('$nome $resposta de idade! \n');
+    return '$nome $resposta de idade! \n';
   }
 
-  void contagemRegressiva(int numero){
+  String contagemRegressiva(int numero){
+    var resultado;
     for (var i = numero; i >= 0; i--) {
-      print('Contagem: ${(i == 0) ? 'VAI!!!' : 1}');
+      (i != 0) ? print('Contagem: $i') : resultado =  'COntagem VAI!!!';
     }
+    return resultado;
   }
 
-  converterKparaMilhas(dynamic array){
+  String converterKparaMilhas(dynamic array){
     dynamic milha = 0.621271;
     for (dynamic item in array) {
-      print('$item \t Km/h em Milhas /h ${(item * milha).toStringAsFixed(2)}')
+      print('$item \t Km/h em Milhas /h ${(item * milha).toStringAsFixed(2)}');
     }
-    print('Array convertido e arredondado');
+    return '\nArray convertido e arredondado\n';
   }
 
   conceito();
