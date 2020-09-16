@@ -39,7 +39,8 @@ funcaoClosure(){
   var novoObjeto = () {
     var id = 0;
     var objetoCriado = (String nome, descricao) {
-        return 'id: ${(++id).toString().padLeft(2, '0')} nome: $nome, descricao: $descricao'; //retorna array
+        // return 'id: ${(++id).toString().padLeft(2, '0')} nome: $nome, descricao: $descricao'; //retorna array
+        return {'id': (++id).toString().padLeft(2, '0'), 'nome': nome, 'descricao': descricao}; //retorna array
     };
     return objetoCriado;
   };
@@ -52,7 +53,7 @@ funcaoClosure(){
   listaObjetos.add(objeto('Fones', 100));
 
   for (var objeto in listaObjetos) {
-    print(objeto);
+    print(objeto.map((c, v) => MapEntry(c, (v is double) ? '${descontarDez(v)}' : v)));
   }
 }
 
