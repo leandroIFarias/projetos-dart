@@ -15,7 +15,7 @@ funcaoClosure(){
   print(saudacao);
   saudacao('Fernando');
 
-  print('\n06.5.1) Closures com Retorno\n');
+  print('\n06.5.2) Closures com Retorno\n');
 
   Function somar(int valorA){
     print(valorA);
@@ -34,6 +34,26 @@ funcaoClosure(){
   print(descontarDez(100));
   print(descontarVinte(200));
 
+  print('\n06.5.3) Closures com Retorno\n');
+
+  var novoObjeto = () {
+    var id = 0;
+    var objetoCriado = (String nome, descricao) {
+        return 'id: ${(++id).toString().padLeft(2, '0')} nome: $nome, descricao: $descricao'; //retorna array
+    };
+    return objetoCriado;
+  };
+
+  var objeto = novoObjeto();
+  print(objeto);
+
+  var listaObjetos = [objeto('Biscoito', 1.99)];
+  listaObjetos.add(objeto('Casa', 3000.00));
+  listaObjetos.add(objeto('Fones', 100));
+
+  for (var objeto in listaObjetos) {
+    print(objeto);
+  }
 }
 
 
