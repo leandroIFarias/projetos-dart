@@ -28,6 +28,12 @@ funcaoClosure(){
   var somarDez = somar(10);
   print(somarDez(5.0));
 
+  Function porcetagem(desconto) => (valor) => desconto * valor;
+  var descontarDez = porcetagem(.9);
+  var descontarVinte = porcetagem(.8);
+  print(descontarDez(100));
+  print(descontarVinte(200));
+
 }
 
 
