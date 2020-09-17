@@ -40,7 +40,8 @@ funcaoClosure(){
     var id = 0;
     var objetoCriado = (String nome, descricao) {
         // return 'id: ${(++id).toString().padLeft(2, '0')} nome: $nome, descricao: $descricao'; //retorna array
-        return {'id': (++id).toString().padLeft(2, '0'), 'nome': nome, 'descricao': descricao}; //retorna array
+        return Objeto.fromMap({'id': (++id).toString().padLeft(2, '0'), 'nome': nome, 'descricao': descricao}); 
+        
     };
     return objetoCriado;
   };
@@ -53,10 +54,28 @@ funcaoClosure(){
   listaObjetos.add(objeto('Fones', 100));
 
   for (var objeto in listaObjetos) {
-    print(objeto.map((c, v) => MapEntry(c, (v is double) ? '${descontarDez(v)}' : v)));
+    // print(objeto.map((c, v) => MapEntry(c, (v is double) ? '${descontarDez(v)}' : v))); // array Map
+    print((objeto.descricao is num) ? descontarVinte(objeto.descricao) : objeto.descricao);  
   }
 }
 
+
+class Objeto {
+  String id, nome;
+  dynamic descricao;
+  Objeto({
+    this.id,
+    this.nome,
+    this.descricao,
+  });
+  factory Objeto.fromMap(Map<String, dynamic> map){
+    return Objeto(
+      id: map['id'].toString(),
+      nome: map['nome'],
+      descricao: map['descricao'],
+    );
+  }
+}
 
 void main() {
   funcaoClosure();
