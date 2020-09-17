@@ -1,7 +1,6 @@
-void main() {
-  
-}
+import 'Pessoa.dart';
+import 'Usuario.dart';
 
-class Pessoa{
+void main() {
   
 }
