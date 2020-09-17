@@ -6,7 +6,7 @@ import 'Usuario.dart';
 /// Classes => Objetos
 /// Variaveis => atributos
 /// Funcoes => metodos
-/// 
+///
 
 void main() {
   print('07.0) Clsses/objetos\n');
@@ -21,17 +21,22 @@ void main() {
   pessoa2.idade = 29;
   print('Nome: ${pessoa2.nome} idade: ${pessoa2.idade}');
 
+  // Operador em cascata permite emitir varias chamadas por meio de um objeto
+  var pessoa3 = Pessoa();
+  pessoa3
+    ..nome = 'Ane'
+    ..idade = 25
+    ..info();
+
   // Dados inseridos pelo usuario
   Usuario usuario = new Usuario();
   usuario.usuario = 'teste@gmail.com';
   usuario.senha = '12345';
   usuario.autenticar();
 
-
   Conta conta = Conta();
   print('Nome: ${conta.nome} Nº Conta: ${conta.numeroConta} Saldo: ${conta.consultarSaldo()}');
   conta.calcularSalario(950, 150, 2);
   conta.depositar(150);
   conta.sacar(50);
-
 }
