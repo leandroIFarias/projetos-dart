@@ -40,7 +40,27 @@ class Conta {
     }
   }
 
+  // getter e setter costumizados
+  String get informacao => 'Titular: ${_nome} Nº Conta: ${_numeroConta} Saldo atualizado: ${_saldo}';
 
-  
+  set deposito(double deposito){
+    if (deposito > 0) {
+      this._saldo += deposito;
+      print('Deposito valor: $deposito Saldo atualizado: $_saldo');
+    }
+  }
+
+  set saque(double saque){
+    if (saque > 0 && saque <= _limite) {
+      if (saque <= _saldo) {
+        this._saldo -= saque;
+        print('Saque valor: $_saldo Saldo atualizado: $_saldo');
+      } else {
+        print('Saldo valor: $_saldo insuficiente para sque de : $saque');
+      }
+    } else {
+      print('Limite para saque: $_limite');
+    }
+  }
 
 }
